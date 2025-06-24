@@ -433,3 +433,35 @@ body > nextjs-portal {
   opacity: 0 !important;
   pointer-events: none !important;
 }
+
+/* === Nút gửi ảnh/gửi tệp (file-upload-label) === */
+.file-upload-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--first-color);
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  opacity: 1;
+  transition: background 0.2s, opacity 0.2s, color 0.2s, transform 0.2s;
+  border: none;
+  gap: 6px;
+}
+.file-upload-label:hover {
+  background: var(--first-color-alt);
+  color: #fff;
+  transform: scale(1.04);
+}
+.file-upload-label:active {
+  opacity: 0.8;
+}
+.file-upload-label[disabled], .file-upload-label[aria-disabled="true"] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
